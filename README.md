@@ -23,11 +23,11 @@
   - 설치 참고링크(https://atoz-develop.tistory.com/entry/H2-Database-%EC%84%A4%EC%B9%98-%EC%84%9C%EB%B2%84-%EC%8B%A4%ED%96%89-%EC%A0%91%EC%86%8D-%EB%B0%A9%EB%B2%95)
 
  + root-context.xml 파일 위치 변경(src/main/resources/spring)
+  - dataSource 및 myBaties 설정 추가
  
  + @RestController 응답값 json 변환 설정
-  - pom.xml 에 jackson-databind,core,annotations 만 추가하면 된다.
+  - pom.xml 에 jackson-databind,core,annotations 만 추가하면 된다.  
     (별도 xml 파일에 convert 관련 설정값을 필요 없음)
     
- 
  + junit 설정
-  - src/test/resources
+  - src/main/resources 를 복사하여 구성함.
