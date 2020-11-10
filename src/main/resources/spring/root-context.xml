@@ -35,4 +35,8 @@
 		<property name="basePackage" value="com.my.app.**.dao" />
 	</bean>
 	 
+	<!-- java 파일에 @Component 를 사용하였지만'
+	     빈을 찾지 못해서 여기에 추가 -->
+	<bean id="filterTest" class="com.my.app.filter.FilterTest" />
+	
 </beans>
