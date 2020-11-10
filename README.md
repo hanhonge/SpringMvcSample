@@ -31,3 +31,9 @@
     
  + junit 설정
   - src/main/resources 를 복사하여 구성함.
+  
+ + logback 적용(2020.11.10)
+  - spring 프로젝트 생성시 log4j 기준으로 셋팅된거 모두 제거
+  - pom.xml dependency에는 jcl-over-slf4j, logback-classic 만 지정
+    * 참고 https://yookeun.github.io/java/2015/11/10/log4jtologback/
+  - console, file 로 로그저장 설정 추가

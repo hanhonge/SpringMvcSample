@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="console"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-5level %d{HH:mm:ss} [%F:%line] - %msg%n</pattern>
+		</layout>
+	</appender>
+
+	<!-- 로그를 파일로 저장
+	     1. 로그 파일의 최대크기는 20MB
+	     2. 최대 3일치 로그파일까지
+	 -->
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>D:/kwon/dev/log/fileRolling.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>D:/kwon/dev/log/fileRolling.%d{yyyy-MM-dd-HH}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>20MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			
+			<maxHistory>3</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%-5level %d{HH:mm:ss} [%F:%line] - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- level 을 DEBUG 로 할 경우 로그 보기가 불편해서 INFO 레벨을 사용하도록 지정. -->
+	<root>
+		<level value="info" />
+		<appender-ref ref="console" />
+<!-- 		<appender-ref ref="file" /> -->
+	</root>
+
+</configuration>
