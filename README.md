@@ -52,3 +52,10 @@
  + h2 메모리 db dirver not found 대처(2020.11.11)
   - pom.xml dependency h2 scope compile 변경
   - h2 driver .jar 파일 라이브러리로 추가
+  
+ + filter 추가(2020.11.11)
+  - web.xml 에 filter 등록
+  - root-context.xml 에 filter bean 등록
+  
+ + 인터셉터 추가(2020.11.11)
+  - servlet-context.xml 에 bean 및 인터셉터 추가
