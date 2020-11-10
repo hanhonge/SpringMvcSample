@@ -36,4 +36,19 @@
   - spring 프로젝트 생성시 log4j 기준으로 셋팅된거 모두 제거
   - pom.xml dependency에는 jcl-over-slf4j, logback-classic 만 지정
     * 참고 https://yookeun.github.io/java/2015/11/10/log4jtologback/
-  - console, file 로 로그저장 설정 추가
+  - console, file 로 로그저장 설정 추가 
+ 
+ + web.xml 수정(2020.11.10)
+  - <filter> 태그 auto-complete 지원이 안되어서 xml schema 변경.
+     아래 내용으로 수정함
+     <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+     </web-app>
+     * 참고  
+       https://antoniogoncalves.org/2013/06/04/java-ee-7-deployment-descriptors/
+       
+ + h2 메모리 db dirver not found 대처(2020.11.11)
+  - pom.xml dependency h2 scope compile 변경
+  - h2 driver .jar 파일 라이브러리로 추가

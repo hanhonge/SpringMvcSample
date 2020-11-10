@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 
 @Component("filterTest")
 public class FilterTest implements Filter {
-
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Override
@@ -22,6 +21,8 @@ public class FilterTest implements Filter {
 		logger.debug("filter start!");
 		
 		System.out.println("####################");
+		
+		chain.doFilter(request, response);
 		
 		logger.debug("filter end!");
 	}
