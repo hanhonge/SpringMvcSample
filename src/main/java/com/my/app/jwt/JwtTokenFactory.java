@@ -1,4 +1,4 @@
-package com.my.app.enums;
+package com.my.app.jwt;
 
 import java.util.Date;
 import java.util.Map;
