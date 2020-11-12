@@ -30,6 +30,7 @@ public enum JwtTokenFactory {
 	public String createJwtToken(Map<String, Object> claims) {
 		return Jwts.builder()
 				.setId("jwtTokenDefault")
+				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.setClaims(claims)
 				.signWith(signAlgorithm, DatatypeConverter.parseBase64Binary(secretKey))
 				.setExpiration(new Date(System.currentTimeMillis() + expireTime))
