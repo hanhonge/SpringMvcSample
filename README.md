@@ -59,3 +59,12 @@
   
  + 인터셉터 추가(2020.11.11)
   - servlet-context.xml 에 bean 및 인터셉터 추가
+
+ + JWT(Json Web Token) 샘플추가(2020.11.12)
+  - JwtTokenFactory 토큰 생성 및 파싱
+  - JwtResult 토큰 처리 결과 관련 메세지 처리
+  * 참고  
+    https://devkingdom.tistory.com/113  
+    https://jamcode.tistory.com/m/45  
+    https://www.codota.com/code/java/methods/io.jsonwebtoken.JwtBuilder/setClaims  
+    
